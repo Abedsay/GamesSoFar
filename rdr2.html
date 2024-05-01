@@ -1,0 +1,527 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Red Dead Redemption 2</title>
+    <style>
+        body {
+            background-color: #2b2b2b;
+            background: url('assets/images/rdr22.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            color: #ffffff;
+            font-family: 'Press Start 2P', cursive;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .content {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px;
+        }
+
+        #RED {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        #RED h2 {
+            color: #ff5555;
+            margin-bottom: 20px;
+        }
+
+        #RED img {
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+        }
+
+        #RED p {
+            font-size: 16px;
+            color: #dddddd;
+        }
+
+        #RED h4 {
+            margin-top: 30px;
+            color: #4CAF50;
+        }
+
+        #RED ul {
+            list-style-type: square;
+            margin-left: 40px;
+        }
+
+        #RED table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #RED th,
+        #RED td {
+            border: 1px solid #ffffff;
+            padding: 10px;
+            text-align: left;
+        }
+
+        #RED th {
+            background-color: #333333;
+            color: #ffffff;
+        }
+
+        #RED td {
+            background-color: #444444;
+            color: #dddddd;
+        }
+
+        hr {
+            border: 1px solid #555555;
+            margin-top: 30px;
+        }
+
+
+        #back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #555;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            opacity: 0.5;
+            transition: opacity 0.3s;
+        }
+
+        #back-to-top:hover {
+            opacity: 1;
+        }
+
+        #review {
+            background-color: #333;
+            padding: 2em;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            max-width: 800px;
+            margin: 3em auto;
+            color: #f2f2f2;
+        }
+
+        #review h2,
+        #review h4 {
+            color: #4CAF50;
+        }
+
+        #review select,
+        #review input[type="text"],
+        #review input[type="file"] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            background-color: #555;
+            color: #fff;
+        }
+
+        #review input[type="submit"],
+        #review input[type="reset"] {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        #review input[type="submit"]:hover,
+        #review input[type="reset"]:hover {
+            background-color: #45a049;
+        }
+
+        #review input[type="radio"] {
+            margin: 0 10px 0 0;
+        }
+
+        #review form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .font-red {
+            color: red;
+        }
+
+        .rate {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .rate input[type="radio"] {
+            display: none;
+        }
+
+        .rate label {
+            cursor: pointer;
+            font-size: 2em;
+            color: #444;
+        }
+
+        .rate label:before {
+            content: "\2605";
+            padding: 10px;
+        }
+
+        .rate input[type="radio"]:checked~label {
+            color: #fd4;
+        }
+
+        .rate input[type="radio"]:checked~label:before {
+            content: "\2605";
+        }
+
+        textarea {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            background-color: #555;
+            color: #fff;
+            height: 150px;
+        }
+
+        .buttons input[type="submit"],
+        .buttons input[type="reset"] {
+            width: auto;
+            padding: 10px 20px;
+            margin-right: 10px;
+        }
+
+
+
+        select {
+            background-color: #5d5d5d;
+            border: none;
+            color: #ffffff;
+            padding: 10px;
+            font-size: 1.2em;
+            width: 50%;
+            margin: 0 auto;
+        }
+
+        input[type="radio"],
+        input[type="submit"],
+        input[type="reset"] {
+            background-color: #5d5d5d;
+            border: none;
+            color: #ffffff;
+            padding: 10px;
+            font-size: 1.2em;
+            margin: 0.5em 0;
+        }
+
+        input[type="text"],
+        textarea {
+            background-color: #3a3a3a;
+            border: none;
+            color: #ffffff;
+            padding: 10px;
+            font-size: 1.2em;
+            width: 50%;
+            margin: 0 auto;
+        }
+
+        input[type="file"] {
+            background-color: #5d5d5d;
+            border: none;
+            color: #ffffff;
+            padding: 10px;
+            font-size: 1.2em;
+            width: 50%;
+            margin: 0 auto;
+            margin-bottom: 1em;
+        }
+
+        #comment-section {
+            margin-top: 20px;
+            background-color: #424242;
+            padding: 20px;
+            border-radius: 4px;
+        }
+
+        #comment-section h3 {
+            color: #fff;
+        }
+
+        #comment-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .comment-avatar img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+
+        #comment-list li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #333;
+        }
+
+        #comment-list li .comment-avatar {
+            margin-right: 10px;
+        }
+
+        #comment-list li .comment-content {
+            flex: 1;
+        }
+
+        #comment-input {
+            width: 100%;
+            background: #333;
+            border: 1px solid #333;
+            padding: 10px;
+            color: #fff;
+            border-radius: 2px;
+            margin-top: 10px;
+        }
+
+        .comment-actions {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 10px;
+        }
+
+        .comment-actions .cancel-btn,
+        .comment-actions .submit-btn {
+            background-color: #606060;
+            border: none;
+            color: white;
+            padding: 8px 16px;
+            margin-left: 8px;
+            border-radius: 2px;
+            cursor: pointer;
+        }
+
+        .comment-actions .submit-btn {
+            background-color: #cc181e;
+        }
+
+        .comment-actions .cancel-btn:hover,
+        .comment-actions .submit-btn:hover {
+            opacity: 0.8;
+        }
+
+        .user-comment {
+            color: #fff;
+            margin-top: 5px;
+        }
+
+        .user-comment p {
+            margin: 0;
+        }
+
+        .user-comment .user-name {
+            font-weight: bold;
+        }
+
+        .user-comment .comment-date {
+            color: #aaa;
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <div id="RED">
+            <h2>&nbsp;&nbsp;&nbsp;Red Dead Redemption 2</h2>
+            <img src=assets/images/rdr2.jpg align="right" border="5" width="200" height="300" />
+            <p>
+                Red Dead Redemption 2[a] is a 2018 action-adventure game developed and published by Rockstar Games. The
+                game
+                is the third entry in the Red Dead series and a prequel to the 2010 game Red Dead Redemption. The story
+                is
+                set in a fictionalized representation of the United States in 1899 and follows the exploits of Arthur
+                Morgan, an outlaw and member of the Van der Linde gang, who must deal with the decline of the Wild West
+                while attempting to survive against government forces, rival gangs, and other adversaries. The game is
+                presented through first- and third-person perspectives, and the player may freely roam in its
+                interactive
+                open world. Gameplay elements include shootouts, robberies, hunting, horseback riding, interacting with
+                non-player characters, and maintaining the character's honor rating through moral choices and deeds. A
+                bounty system governs the response of law enforcement and bounty hunters to crimes committed by the
+                player.
+            </p>
+            <p>
+                The game's development lasted over eight years, beginning soon after Red Dead Redemption's release, and
+                it
+                became one of the most expensive video games ever made. Rockstar co-opted all of its studios into one
+                large
+                team to facilitate development. They drew influence from real locations as opposed to film or art,
+                focused
+                on creating an accurate reflection of the time with the game's characters and world. The game was
+                Rockstar's
+                first built specifically for eighth-generation consoles, having tested their technical capabilities
+                while
+                porting Grand Theft Auto V.
+            <p>The game's soundtrack features an original score composed by Woody Jackson
+                and
+                several vocal tracks produced by Daniel Lanois. Development included a crunch schedule of 100-hour
+                weeks,
+                leading to reports of mandatory and unpaid overtime. Red Dead Online, the game's online multiplayer
+                mode,
+                lets up to 32 players engage in a variety of cooperative and competitive game modes.</p>
+            </p>
+            <h4>Game Details: (On Steam®)</h4>
+            <ul type="square">
+                <li>User reviews: Very Positive</li>
+                <li>Developer: Rockstar Games</li>
+                <li>Publisher: Rockstar Games</li>
+                <li>Release Date: Dec 2019</li>
+                <li>Tags: Open World, Survival, Story Rich, Adventure</li>
+            </ul>
+            <h4>System Requirements</h4>
+            <table style="width:50%" border="1">
+                <tr>
+                    <th>System</th>
+                    <th>Minimum</th>
+                    <th>Recommended</th>
+                </tr>
+                <tr>
+                    <td align="center">CPU</td>
+                    <td>Intel® Core™ i7-4770K / AMD Ryzen 5 1500X</td>
+                    <td>Intel® Core™ i7-4770K / AMD Ryzen 5 1500X</td>
+                </tr>
+                <tr>
+                    <td align="center">RAM</td>
+                    <td>12GB</td>
+                    <td>12GB</td>
+                </tr>
+                <tr>
+                    <td align="center">GPU</td>
+                    <td>Nvidia GeForce GTX 1060 6GB / AMD Radeon RX 480 4GB</td>
+                    <td>Nvidia GeForce GTX 1060 6GB / AMD Radeon RX 480 4GB</td>
+                </tr>
+                <tr>
+                    <td align="center">Storage</td>
+                    <td>150 GB available space</td>
+                    <td>150 GB available space</td>
+                </tr>
+            </table>
+            <hr>
+        </div>
+    </div>
+    <div id="review">
+        <form action="#review" method="post">
+            <h2>Rate the game:</h2>
+            <div class="rate">
+                <input type="radio" id="star5" name="rate" value="5" />
+                <label for="star5" title="text">5</label>
+                <input type="radio" id="star4" name="rate" value="4" />
+                <label for="star4" title="text">4</label>
+                <input type="radio" id="star3" name="rate" value="3" />
+                <label for="star3" title="text">3</label>
+                <input type="radio" id="star2" name="rate" value="2" />
+                <label for="star2" title="text">2</label>
+                <input type="radio" id="star1" name="rate" value="1" />
+                <label for="star1" title="text">1</label>
+            </div>
+            <h2>Select the game you would like to play next:</h2>
+            <select>
+                <option value="Minecraft">Minecraft</option>
+                <option value="Call Of Duty">Call Of Duty</option>
+                <option value="Apex Legends">Apex Legends</option>
+                <option value="Cyberpunk 2077">Cyberpunk 2077</option>
+                <option value="Fortnite">Fortnite</option>
+                <option value="Counter-Strike">Counter-Strike</option>
+                <option value="Red Dead Redemption 2">Red Dead Redemption 2</option>
+                <option value="Grand Theft Auto V">Grand Theft Auto V</option>
+                <option value="PUBG">PUBG</option>
+                <option value="The Witcher 3">The Witcher 3</option>
+            </select>
+            <div class="buttons">
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </div>
+        </form>
+        <div id="comment-section">
+            <h3>Player Comments:</h3>
+            <ul id="comment-list">
+            </ul>
+            <form id="new-comment-form">
+                <div class="comment-avatar">
+                    <img src="assets/images/Skull.jpg" alt="Your Avatar" />
+                </div>
+                <textarea id="comment-input" name="comment" placeholder="Add a public comment..." required></textarea>
+                <div class="comment-actions">
+                    <button type="button" class="cancel-btn">CANCEL</button>
+                    <button type="submit" class="submit-btn">COMMENT</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <button id="back-to-top" title="Go to top">Top</button>
+    <script>
+        const backToTopButton = document.getElementById("back-to-top");
+
+        window.addEventListener("scroll", () => {
+            if (window.pageYOffset > 100) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        });
+
+        backToTopButton.addEventListener("click", () => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+        document.getElementById('new-comment-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            var commentText = document.getElementById('comment-input').value.trim();
+            if (!commentText) return;
+
+            var commentsList = document.getElementById('comment-list');
+            var newComment = document.createElement('li');
+            newComment.innerHTML = `
+        <div class="comment-avatar">
+            <img src="assets/images/Skull.jpg" alt="Avatar" />
+        </div>
+        <div class="comment-content">
+            <div class="user-comment">
+                <span class="user-name">Skull Crusher</span> <span class="comment-date">Just now</span>
+                <p>${commentText}</p>
+            </div>
+        </div>
+    `;
+
+            // Add the comment to the list
+            commentsList.insertBefore(newComment, commentsList.firstChild);
+
+            document.getElementById('comment-input').value = '';
+        });
+
+    </script>
+</body>
+
+</html>

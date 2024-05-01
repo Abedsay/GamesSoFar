@@ -1,0 +1,149 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Top 10 Games - GamesSoFar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="about-us.html">About Us</a>
+            <div class="dropdown">
+                <button class="dropbtn">PrevTops</button>
+                <div class="dropdown-content">
+                    <a href="witcher.html">The Witcher 3</a>
+                    <a href="farcry.html">Farcry</a>
+                    <a href="elden.html">Eldin Ring</a>
+                </div>
+            </div>
+            <a href="#review">Suggest</a>
+            <a href="change.html">Change Log</a>
+            <button class="login-btn" onclick="location.href='login.html';">Log In</button>
+        </nav>
+        <div id="home">
+            <h2>Welcome to GamesSoFar!</h2>
+            <p>Dive into the thrilling world of video games with GamesSoFar. Whether you're a hardcore gamer or just
+                getting started, we've got something for everyone. From heart-pounding action to immersive storytelling,
+                video games have become an integral part of entertainment over the years.</p>
+            <p>In this website, you will dive deep into the several details of modern games, requirements, reviews, etc.
+            </p>
+            <h3>Below are the top 10 trending games over the decade:</h3>
+            <hr>
+        </div>
+    </header>
+    <br>
+    <div class="l-container">
+        <a href="genshin.html" class="b-game-card">
+            <div class="b-game-card__cover" style="background-image: url(assets/images/genshin.jpg);">
+                <div class="game-info">
+                    <h3 class="game-name">Genshin Impact</h3>
+                    <p class="game-rating">★★★★★</p>
+                </div>
+            </div>
+        </a>
+        <a href="mc.html" class="b-game-card">
+            <div class="b-game-card__cover" style="background-image: url(assets/images/mc.png);">
+                <div class="game-info">
+                    <h3 class="game-name">Minecraft</h3>
+                    <p class="game-rating">★★★★☆</p>
+                </div>
+            </div>
+        </a>
+        <a href="cs.html" class="b-game-card">
+            <div class="b-game-card__cover" style="background-image: url(assets/images/cs.jpg);">
+                <div class="game-info">
+                    <h3 class="game-name">Counter-Strike</h3>
+                    <p class="game-rating">★★★★½</p>
+                </div>
+            </div>
+        </a>
+        <a href="cod.html" class="b-game-card">
+            <div class="b-game-card__cover" style="background-image: url(assets/images/cod.jpg);">
+                <div class="game-info">
+                    <h3 class="game-name">Call Of Duty</h3>
+                    <p class="game-rating">★★★★★</p>
+                </div>
+            </div>
+        </a>
+        <a href="apex.html" class="b-game-card">
+            <div class="b-game-card__cover" style="background-image: url(assets/images/apex.jpg);">
+                <div class="game-info">
+                    <h3 class="game-name">Apex Legends</h3>
+                    <p class="game-rating">★★★★½</p>
+                </div>
+            </div>
+        </a>
+        <a href="cyber.html" class="b-game-card">
+            <div class="b-game-card__cover" style="background-image: url(assets/images/cyber.jpg);">
+                <div class="game-info">
+                    <h3 class="game-name">Cyberpunk 2077</h3>
+                    <p class="game-rating">★★★★☆</p>
+                </div>
+            </div>
+        </a>
+        <a href="fortnite.html" class="b-game-card">
+            <div class="b-game-card__cover" style="background-image: url(assets/images/fortnite.jpg);">
+                <div class="game-info">
+                    <h3 class="game-name">Fortnite</h3>
+                    <p class="game-rating">★★★½</p>
+                </div>
+            </div>
+        </a>
+        <a href="rdr2.html" class="b-game-card">
+            <div class="b-game-card__cover" style="background-image: url(assets/images/rdr2.jpg);">
+                <div class="game-info">
+                    <h3 class="game-name">Red Dead Redemption 2</h3>
+                    <p class="game-rating">★★★★★</p>
+                </div>
+            </div>
+        </a>
+        <a href="gta5.html" class="b-game-card">
+            <div class="b-game-card__cover" style="background-image: url(assets/images/gta5.png);">
+                <div class="game-info">
+                    <h3 class="game-name">Grand Theft Auto V</h3>
+                    <p class="game-rating">★★★★½</p>
+                </div>
+            </div>
+        </a>
+        <a href="pubg.html" class="b-game-card">
+            <div class="b-game-card__cover" style="background-image: url(assets/images/pubg.jpg);">
+                <div class="game-info">
+                    <h3 class="game-name">PUBG</h3>
+                    <p class="game-rating">★★★½</p>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div id="review">
+        <form action="#review" method="post">
+            <h2>Suggest a game (optional):</h2>
+            <input type="text">
+            <h2>Attach an image for the game/s suggested (optional):</h2>
+            <input type="file">
+            <div class="buttons">
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </div>
+        </form>
+    </div>
+    <hr>
+    <button id="back-to-top" title="Go to top">Top</button>
+    <script>
+        const backToTopButton = document.getElementById("back-to-top");
+        window.addEventListener("scroll", () => {
+            if (window.pageYOffset > 100) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        });
+        backToTopButton.addEventListener("click", () => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+    </script>
+</body>
+
+</html>

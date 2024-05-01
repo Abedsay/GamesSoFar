@@ -1,0 +1,155 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Log - GamesSoFar</title>
+    <style>
+        /* General Page Styles */
+        body {
+            background-color: #2b2b2b;
+            color: #ffffff;
+            font-family: 'Arial', sans-serif;
+            /* More readable font for body */
+            margin: 0;
+            padding: 20px;
+        }
+
+        #changelog-container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #1e1e1e;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Headings and Subheadings */
+        h1 {
+            font-family: 'Press Start 2P', cursive;
+            /* Gaming-themed font for headings */
+            color: #4CAF50;
+            /* Brand color */
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            color: #FFD700;
+            /* Gold color for subheadings */
+            padding-bottom: .5em;
+            border-bottom: 2px solid #555;
+            /* Separator for subheading */
+            margin-top: 20px;
+        }
+
+        /* Change Log Entries */
+        .changelog-entry {
+            margin-bottom: 15px;
+        }
+
+        .changelog-entry h3 {
+            font-size: 1.2em;
+            color: #FFD700;
+        }
+
+        .changelog-entry p {
+            font-size: 1em;
+            margin-left: 1em;
+            color: #ccc;
+        }
+
+        .changelog-entry ul {
+            list-style: none;
+            /* Remove default bullets */
+        }
+
+        .changelog-entry ul li::before {
+            content: '\2022';
+            /* Unicode bullet */
+            color: #FFD700;
+            /* Gold color bullets */
+            font-weight: bold;
+            /* Bold bullet */
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+
+        /* Icons for Entries (optional) */
+        .icon-adjustments:before {
+            content: '\2699';
+            /* Unicode gear icon */
+            /* Add additional styling for the icon */
+        }
+
+        .icon-new-feature:before {
+            content: '\271A';
+            /* Unicode plus sign icon */
+            /* Add additional styling for the icon */
+        }
+
+        .icon-improvements:before {
+            content: '\2714';
+            /* Unicode check icon */
+            /* Add additional styling for the icon */
+        }
+
+        /* Responsive Media Queries */
+        @media (max-width: 768px) {
+            #changelog-container {
+                margin: 10px;
+                padding: 10px;
+            }
+
+            h2 {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <!-- Navigation bar here, make sure to include the link to the changelog page -->
+    </header>
+
+    <main id="changelog">
+        <h1>Website Change Log</h1>
+        <!-- Add the changelog content here -->
+        <section>
+            <h2>General Changes:</h2>
+            <p>- Added "Change Log" link in the navigation bar to document website updates.</p>
+        </section>
+        <section>
+            <h2>Structural and Content Enhancements:</h2>
+            <p>- Updated navigation links to include a dropdown for "PrevTops" featuring games like "The Witcher 3",
+                "Farcry", and "Eldin Ring".</p>
+            <p>- Introduced new section for game suggestions with an option to submit game recommendations and upload
+                related images.</p>
+            <p>- Enhanced "Back to Top" button functionality for improved navigation.</p>
+        </section>
+        <section>
+            <h2>Style and Presentation Adjustments:</h2>
+            <p>- Refined CSS styling for better visual appeal and consistency across the site.</p>
+            <p>- Improved responsiveness for better user experience on various devices.</p>
+            <p>- Enhanced image presentation with better alignment and border styling for a more polished look.</p>
+        </section>
+        <section>
+            <h2>New Additions:</h2>
+            <p>- Added detailed game pages for top trending games including descriptions, user reviews, and system
+                requirements.</p>
+            <p>- Introduced user review section allowing visitors to rate and suggest games, fostering community
+                interaction.</p>
+            <p>- Implemented interactive comment sections on each game page, providing a space for community discussions
+                and player feedback. (For now Local only)</p>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Your footer here -->
+    </footer>
+</body>
+
+</html>

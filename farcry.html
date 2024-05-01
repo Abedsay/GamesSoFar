@@ -1,0 +1,328 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Farcry</title>
+    <style>
+        body {
+            background-color: #2b2b2b;
+            background: url('assets/images/farcry2.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #ffffff;
+            font-family: 'Press Start 2P', cursive;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .content {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px;
+        }
+
+        #FARCRY {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        #FARCRY h2 {
+            color: #ff5555;
+            margin-bottom: 20px;
+        }
+
+        #FARCRY img {
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+        }
+
+        #FARCRY p {
+            font-size: 16px;
+            color: #dddddd;
+        }
+
+        #FARCRY h4 {
+            margin-top: 30px;
+            color: #4CAF50;
+        }
+
+        #FARCRY ul {
+            list-style-type: square;
+            margin-left: 40px;
+        }
+
+        #FARCRY table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #FARCRY th,
+        #FARCRY td {
+            border: 1px solid #ffffff;
+            padding: 10px;
+            text-align: left;
+        }
+
+        #FARCRY th {
+            background-color: #333333;
+            color: #ffffff;
+        }
+
+        #FARCRY td {
+            background-color: #444444;
+            color: #dddddd;
+        }
+
+        hr {
+            border: 1px solid #555555;
+            margin-top: 30px;
+        }
+
+
+        #back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #555;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            opacity: 0.5;
+            transition: opacity 0.3s;
+        }
+
+        #back-to-top:hover {
+            opacity: 1;
+        }
+
+        #review {
+            background-color: #333;
+            padding: 2em;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            max-width: 800px;
+            margin: 3em auto;
+            color: #f2f2f2;
+        }
+
+        #review h2,
+        #review h4 {
+            color: #4CAF50;
+        }
+
+        #review select,
+        #review input[type="text"],
+        #review input[type="file"] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            background-color: #555;
+            color: #fff;
+        }
+
+        #review input[type="submit"],
+        #review input[type="reset"] {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        #review input[type="submit"]:hover,
+        #review input[type="reset"]:hover {
+            background-color: #45a049;
+        }
+
+        #review input[type="radio"] {
+            margin: 0 10px 0 0;
+        }
+
+        #review form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .font-red {
+            color: red;
+        }
+
+        .rate {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .rate input[type="radio"] {
+            display: none;
+        }
+
+        .rate label {
+            cursor: pointer;
+            font-size: 2em;
+            color: #444;
+        }
+
+        .rate label:before {
+            content: "\2605";
+            padding: 10px;
+        }
+
+        .rate input[type="radio"]:checked~label {
+            color: #fd4;
+        }
+
+        .rate input[type="radio"]:checked~label:before {
+            content: "\2605";
+        }
+
+        textarea {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            background-color: #555;
+            color: #fff;
+            height: 150px;
+        }
+
+        .buttons input[type="submit"],
+        .buttons input[type="reset"] {
+            width: auto;
+            padding: 10px 20px;
+            margin-right: 10px;
+        }
+
+
+
+        select {
+            background-color: #5d5d5d;
+            border: none;
+            color: #ffffff;
+            padding: 10px;
+            font-size: 1.2em;
+            width: 50%;
+            margin: 0 auto;
+        }
+
+        input[type="radio"],
+        input[type="submit"],
+        input[type="reset"] {
+            background-color: #5d5d5d;
+            border: none;
+            color: #ffffff;
+            padding: 10px;
+            font-size: 1.2em;
+            margin: 0.5em 0;
+        }
+
+        input[type="text"],
+        textarea {
+            background-color: #3a3a3a;
+            border: none;
+            color: #ffffff;
+            padding: 10px;
+            font-size: 1.2em;
+            width: 50%;
+            margin: 0 auto;
+        }
+
+        input[type="file"] {
+            background-color: #5d5d5d;
+            border: none;
+            color: #ffffff;
+            padding: 10px;
+            font-size: 1.2em;
+            width: 50%;
+            margin: 0 auto;
+            margin-bottom: 1em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <div id="FARCRY">
+            <h2>&nbsp;&nbsp;&nbsp;Farcry</h2>
+            <p>
+                Far Cry is a 2004 first-person shooter game developed by Crytek and published by Ubisoft. It is the
+                first
+                installment in the Far Cry franchise. Set on a mysterious tropical archipelago, the game follows Jack
+                Carver, a former American special operations forces operative, as he searches for journalist Valerie
+                Constantine, who accompanied him to the islands but went missing after their boat was destroyed by
+                mercenaries. As Jack explores the islands, he begins to discover the horrific genetic experiments being
+                conducted on the local wildlife and must confront the mad scientist behind them.
+            </p>
+            <p>
+                The game was the first to use Crytek's CryEngine, and was designed as an open-ended first-person
+                shooter,
+                though it lacks most of the freedom its successors would offer to the player. While players can freely
+                explore the game's world like in later Far Cry titles, they are most often discouraged from doing so due
+                to
+                the linear structure of missions and the lack of side content. Despite this, the gameplay formula
+                established in Far Cry—placing the player in a foreign environment occupied by enemy forces where they
+                must
+                use various weapons and tools, as well as their surroundings to overcome any threat—would prove
+                essential in
+                defining the series' identity going forward.
+            </p>
+            <h4>Game Details: (On Steam®)</h4>
+            <ul type="square">
+                <li>User reviews: Mostly Positive</li>
+                <li>Developer: Ubisoft</li>
+                <li>Publisher: Ubisoft</li>
+                <li>Release Date: October 2021</li>
+                <li>Tags: free-to-play, Battle Royale, PVP, FPS, Multiplayer</li>
+            </ul>
+            <h4>System Requirements</h4>
+            <table style="width:50%" border="1">
+                <tr>
+                    <th>System</th>
+                    <th>Minimum</th>
+                    <th>Recommended</th>
+                </tr>
+                <tr>
+                    <td align="center">CPU</td>
+                    <td>AMD FX 4350 or Equivalent, Intel Core i3 6300 or Equivalent</td>
+                    <td>Ryzen 5 CPU or Equivalent</td>
+                </tr>
+                <tr>
+                    <td align="center">RAM</td>
+                    <td>6GB</td>
+                    <td>8GB</td>
+                </tr>
+                <tr>
+                    <td align="center">GPU</td>
+                    <td>AMD Radeon™ HD 7730, NVIDIA GeForce® GT 640</td>
+                    <td>AMD Radeon™ R9 290, NVIDIA GeForce® GTX 970</td>
+                </tr>
+                <tr>
+                    <td align="center">Storage</td>
+                    <td>75 GB available space</td>
+                    <td>75 GB available space</td>
+                </tr>
+            </table>
+            <hr>
+        </div>
+    </div>
+</body>
+
+</html>

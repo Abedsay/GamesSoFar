@@ -1,0 +1,324 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>The Witcher 3</title>
+    <style>
+        body {
+            background-color: #2b2b2b;
+            background: url('assets/images/witcher2.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #ffffff;
+            font-family: 'Press Start 2P', cursive;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .content {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px;
+        }
+
+        #WITCHER {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        #WITCHER h2 {
+            color: #ff5555;
+            margin-bottom: 20px;
+        }
+
+        #WITCHER img {
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+        }
+
+        #WITCHER p {
+            font-size: 16px;
+            color: #dddddd;
+        }
+
+        #WITCHER h4 {
+            margin-top: 30px;
+            color: #4CAF50;
+        }
+
+        #WITCHER ul {
+            list-style-type: square;
+            margin-left: 40px;
+        }
+
+        #WITCHER table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #WITCHER th,
+        #WITCHER td {
+            border: 1px solid #ffffff;
+            padding: 10px;
+            text-align: left;
+        }
+
+        #WITCHER th {
+            background-color: #333333;
+            color: #ffffff;
+        }
+
+        #WITCHER td {
+            background-color: #444444;
+            color: #dddddd;
+        }
+
+        hr {
+            border: 1px solid #555555;
+            margin-top: 30px;
+        }
+
+
+        #back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #555;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            opacity: 0.5;
+            transition: opacity 0.3s;
+        }
+
+        #back-to-top:hover {
+            opacity: 1;
+        }
+
+        #review {
+            background-color: #333;
+            padding: 2em;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            max-width: 800px;
+            margin: 3em auto;
+            color: #f2f2f2;
+        }
+
+        #review h2,
+        #review h4 {
+            color: #4CAF50;
+        }
+
+        #review select,
+        #review input[type="text"],
+        #review input[type="file"] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            background-color: #555;
+            color: #fff;
+        }
+
+        #review input[type="submit"],
+        #review input[type="reset"] {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        #review input[type="submit"]:hover,
+        #review input[type="reset"]:hover {
+            background-color: #45a049;
+        }
+
+        #review input[type="radio"] {
+            margin: 0 10px 0 0;
+        }
+
+        #review form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .font-red {
+            color: red;
+        }
+
+        .rate {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .rate input[type="radio"] {
+            display: none;
+        }
+
+        .rate label {
+            cursor: pointer;
+            font-size: 2em;
+            color: #444;
+        }
+
+        .rate label:before {
+            content: "\2605";
+            padding: 10px;
+        }
+
+        .rate input[type="radio"]:checked~label {
+            color: #fd4;
+        }
+
+        .rate input[type="radio"]:checked~label:before {
+            content: "\2605";
+        }
+
+        textarea {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            background-color: #555;
+            color: #fff;
+            height: 150px;
+        }
+
+        .buttons input[type="submit"],
+        .buttons input[type="reset"] {
+            width: auto;
+            padding: 10px 20px;
+            margin-right: 10px;
+        }
+
+
+
+        select {
+            background-color: #5d5d5d;
+            border: none;
+            color: #ffffff;
+            padding: 10px;
+            font-size: 1.2em;
+            width: 50%;
+            margin: 0 auto;
+        }
+
+        input[type="radio"],
+        input[type="submit"],
+        input[type="reset"] {
+            background-color: #5d5d5d;
+            border: none;
+            color: #ffffff;
+            padding: 10px;
+            font-size: 1.2em;
+            margin: 0.5em 0;
+        }
+
+        input[type="text"],
+        textarea {
+            background-color: #3a3a3a;
+            border: none;
+            color: #ffffff;
+            padding: 10px;
+            font-size: 1.2em;
+            width: 50%;
+            margin: 0 auto;
+        }
+
+        input[type="file"] {
+            background-color: #5d5d5d;
+            border: none;
+            color: #ffffff;
+            padding: 10px;
+            font-size: 1.2em;
+            width: 50%;
+            margin: 0 auto;
+            margin-bottom: 1em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <div id="WITCHER">
+            <h2>&nbsp;&nbsp;&nbsp;The Witcher 3</h2>
+            <p>
+                The Witcher 3: Wild Hunt[b] is a 2015 action role-playing game developed and published by CD Projekt. It
+                is
+                the sequel to the 2011 game The Witcher 2: Assassins of Kings and the third game in The Witcher video
+                game
+                series, played in an open world with a third-person perspective. The games follow the Witcher series of
+                fantasy novels written by Andrzej Sapkowski.
+            </p>
+            <p>
+                The game takes place in a fictional fantasy world based on Slavic mythology. Players control Geralt of
+                Rivia, a monster slayer for hire known as a Witcher, and search for his adopted daughter, who is on the
+                run
+                from the otherworldly Wild Hunt. Players battle the game's many dangers with weapons and magic, interact
+                with non-player characters, and complete quests to acquire experience points and gold, which are used to
+                increase Geralt's abilities and purchase equipment. The game's story has three possible endings,
+                determined
+                by the player's choices at key points in the narrative.
+            </p>
+            <h4>Game Details: (On Steam®)</h4>
+            <ul type="square">
+                <li>User reviews: Overwhelmingly Positive</li>
+                <li>Developer: CD PROJEKT RED</li>
+                <li>Publisher: CD PROJEKT RED</li>
+                <li>Release Date: May 2015</li>
+                <li>Tags: RPG, Open World, Story Rich, FPS</li>
+            </ul>
+            <h4>System Requirements</h4>
+            <table style="width:50%" border="1">
+                <tr>
+                    <th>System</th>
+                    <th>Minimum</th>
+                    <th>Recommended</th>
+                </tr>
+                <tr>
+                    <td align="center">CPU</td>
+                    <td>Intel CPU Core i5-2500K 3.3GHz / AMD A10-5800K APU (3.8GHz)</td>
+                    <td>Intel Core i5-7400 / Ryzen 5 1600</td>
+                </tr>
+                <tr>
+                    <td align="center">RAM</td>
+                    <td>6GB</td>
+                    <td>8GB</td>
+                </tr>
+                <tr>
+                    <td align="center">GPU</td>
+                    <td>Nvidia GPU GeForce GTX 660 / AMD GPU Radeon HD 7870</td>
+                    <td>Nvidia GTX 1070 / Radeon RX 480</td>
+                </tr>
+                <tr>
+                    <td align="center">Storage</td>
+                    <td>50 GB available space</td>
+                    <td>50 GB available space</td>
+                </tr>
+            </table>
+            <hr>
+        </div>
+    </div> 
+</body>
+
+</html>
